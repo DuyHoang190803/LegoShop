@@ -1,0 +1,433 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 11, 2023, 11:05:56 AM
+    Author     : Admin
+*/
+
+
+
+body{
+    background-color: white;
+    overflow-x: hidden;
+    font-family: Cera Pro,sans-serif;
+}
+.container{
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+
+}
+.Header-Container{
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    background-color: #f5f5f5;
+    border: 1px #f5f5f5 solid;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.headerFirst img{
+    width: 270px;
+    height: 100px;
+    border: 1px #fff solid;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+input[class="input1"] {
+    background-color: #ef941e;
+    font-weight: bolder;
+    cursor: pointer;     /* Biến con trỏ thành hình bàn tay khi di chuột vào */
+    font-size: 35px;
+    border: 8px black solid;
+    border-radius: 15px;
+    width: 150px;
+    height: 75px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+input[class="input1"]:hover{
+    color: #e44589;
+}
+
+
+
+.Body-Container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+    margin:  30px 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border: 1px #f5f5f5 solid;
+    border-radius: 15px;
+}
+
+.bodyContent{
+    padding: 2.5% 0;
+    width: 94%;
+    margin: 0 auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+
+}
+
+.content{
+    /*    flex: 0 0 calc(20% - 20px);  Điều chỉnh kích thước phù hợp với 20% chiều rộng và trừ đi khoảng cách giữa các phần tử */
+    margin: 20px; /* Khoảng cách giữa các phần tử */
+    height: 400px;
+    width: auto;
+    text-align: center;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+.noidung > * {
+    margin: 15px;
+}
+
+.noidung {
+    padding: 10px 0;
+}
+
+.noidung img{
+    width: 210px;
+    height: 210px;
+    transition: transform 0.7s;
+}
+
+.noidung::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Màu nền khi di chuột */
+    opacity: 0;
+    transition: opacity 0.2s; /* Hiệu ứng độ trong suốt */
+    pointer-events: none; /* Để không chặn sự kiện của các phần tử con */
+}
+
+.noidung:hover img {
+    transform: scale(1.1); /* Thu nhỏ hình ảnh khi di chuột */
+}
+
+.noidung:hover::before{
+    opacity: 1;
+}
+
+
+
+
+.bodyButton {
+    display: flex;
+}
+
+
+.optioncontent {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-family: Cera Pro,sans-serif;
+}
+
+
+.optioncontent:hover {
+    background-color: black; /* Đặt màu nền khi trỏ vào */
+    color: yellow; /* Đặt màu chữ khi trỏ vào */
+}
+
+
+.optioncontent a {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20px;
+    height:  40px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+
+
+.options-box {
+    display: none;
+    position: absolute;
+    background-color: #F6F6F5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 170px;
+    z-index: 1;
+    top: 100%;
+    right:  0;
+    margin-top: 10px; /* Khoảng cách từ .avatarOptions */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* CSS cho avatar */
+.avatar {
+    cursor: pointer;
+}
+
+/* Khi bạn rê chuột vào avatar, hiển thị ô vuông tùy chọn */
+.avatar:hover + .options-box {
+    display: block;
+}
+
+.avatarOptions {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.avatarOptions img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: green solid 3px;
+}
+
+.headerLast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatarOptions{
+    padding-left: 8px;
+}
+
+.headerLastContent h3{
+    opacity: 0.6;
+    font-weight: 520;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Điều chỉnh giá trị bóng và độ mờ tại đây */
+}
+
+.searchbox{
+    display: flex;
+    width: 500px;
+}
+
+.searchbox-text{
+    width: 500px;
+    height: 52px;
+    border-radius: 7px;
+    font-size: 25px;
+}
+
+.searchbox-btn{
+    width: 55px;
+}
+
+.btn{
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+
+
+
+.fa-search{
+    color: white;
+
+}
+
+.shopping{
+    background-color: #ef941e;
+/*    font-weight: 400;
+    cursor: pointer;      Biến con trỏ thành hình bàn tay khi di chuột vào */
+    font-size: 25px;
+    font-weight: bolder;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.shopping:hover{
+    border: 3px #ef941e solid;
+    background-color: wheat;
+}
+
+
+
+
+
+input.form-control:focus{
+    box-shadow: none;
+    border: 1.5px solid #E3E6ED;
+    background-color: #F7F8FD;
+    letter-spacing: 1px;
+}
+.btn-primary{
+    background-color: #5878FF!important;
+    border-radius: 7px;
+}
+.btn-primary:focus{
+    box-shadow: none;
+}
+
+
+
+.optioncontent {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-family: Cera Pro,sans-serif;
+}
+
+
+.optioncontent:hover {
+    background-color: black; /* Đặt màu nền khi trỏ vào */
+    color: yellow; /* Đặt màu chữ khi trỏ vào */
+}
+
+
+.optioncontent a {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20px;
+    height:  40px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+
+
+.options-box {
+    display: none;
+    position: absolute;
+    background-color: #F6F6F5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 170px;
+    z-index: 1;
+    top: 100%;
+    right:  0;
+    margin-top: 10px; /* Khoảng cách từ .avatarOptions */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* CSS cho avatar */
+.avatar {
+    cursor: pointer;
+}
+
+/* Khi bạn rê chuột vào avatar, hiển thị ô vuông tùy chọn */
+.avatar:hover + .options-box {
+    display: block;
+}
+
+.avatarOptions {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.avatarOptions img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: green solid 3px;
+}
+
+.headerLast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatarOptions{
+    padding-left: 8px;
+}
+
+.headerLastContent h3{
+    opacity: 0.6;
+    font-weight: 520;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Điều chỉnh giá trị bóng và độ mờ tại đây */
+}
+
+.searchbox{
+    display: flex;
+    width: 500px;
+}
+
+.searchbox-text{
+    width: 500px;
+    height: 52px;
+    border-radius: 7px;
+    font-size: 25px;
+}
+
+.searchbox-btn{
+    width: 55px;
+}
+
+.btn{
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+
+
+.fa-search{
+    color: white;
+}
+
+
+
+input.form-control:focus{
+    box-shadow: none;
+    border: 1.5px solid #E3E6ED;
+    background-color: #F7F8FD;
+    letter-spacing: 1px;
+}
+.btn-primary{
+    background-color: #5878FF!important;
+    border-radius: 7px;
+}
+.btn-primary:focus{
+    box-shadow: none;
+}
+
+
+
+

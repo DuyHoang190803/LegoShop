@@ -1,0 +1,172 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 20, 2023, 1:34:02 AM
+    Author     : Admin
+*/
+
+
+
+.optioncontent {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-family: Cera Pro,sans-serif;
+}
+
+
+
+.optioncontent a {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20px;
+    height:  40px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.optioncontent a:hover {
+    background: black;
+    color: #ef941e;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+
+
+.options-box {
+    display: none;
+    position: absolute;
+    background-color: #F6F6F5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 170px;
+    z-index: 1;
+    top: 100%;
+    right:  0;
+    margin-top: 10px; /* Khoảng cách từ .avatarOptions */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* CSS cho avatar */
+.avatar {
+    cursor: pointer;
+}
+
+/* Khi bạn rê chuột vào avatar, hiển thị ô vuông tùy chọn */
+.avatar:hover + .options-box {
+    display: block;
+}
+
+.avatarOptions {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.avatarOptions img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: green solid 3px;
+}
+
+.headerLast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatarOptions{
+    padding-left: 8px;
+}
+
+.headerLastContent h3{
+    opacity: 0.6;
+    font-weight: 520;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Điều chỉnh giá trị bóng và độ mờ tại đây */
+
+
+
+}
+
+
+.Header-Container{
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    background-color: #f5f5f5;
+    border: 1px #f5f5f5 solid;
+    border-radius: 15px;
+    /*    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2), 5px -5px 10px rgba(0, 0, 0, 0.2), -5px 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.headerFirst img{
+    width: 270px;
+    height: 100px;
+    border: 1px #fff solid;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.nav{
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.nav-menu ul{
+    display: flex;
+
+}
+.nav-menu ul li{
+    list-style-type: none;
+}
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    padding-bottom: 15px;
+    margin: 0 20px;
+    font-size: 25px;
+
+}
+.link:hover, .active{
+    border-bottom: 5px solid #ef941e;
+}
+
+
+
+input[class="input1"] {
+    background-color: #ef941e;
+    font-weight: bolder;
+    cursor: pointer;     /* Biến con trỏ thành hình bàn tay khi di chuột vào */
+    font-size: 35px;
+    border: 8px black solid;
+    border-radius: 15px;
+    width: 150px;
+    height: 75px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+input[class="input1"]:hover{
+    color: #e44589;
+}
